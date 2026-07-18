@@ -1,0 +1,213 @@
+/* General Navbar Layout */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5%;
+  background: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo Section */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo-text a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Middle Navigation List */
+.cat {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-link {
+  color: #555;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #000;
+}
+
+/* Favorites and Counts */
+.nav-heart {
+  color: #ff4d4d;
+}
+
+.favorite-count {
+  font-size: 0.8rem;
+  background: #ff4d4d;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* Actions Section (Login/Profile) */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn-primary {
+  padding: 8px 20px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+/* Profile and Dropdown */
+.profile {
+  position: relative;
+}
+
+.profile-btn {
+  background: none;
+  border: 1px solid #ccc;
+  padding: 5px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 45px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  padding: 5px 0;
+}
+
+.dropdown-menu a, .dropdown-menu button {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dropdown-menu a:hover, .dropdown-menu button:hover {
+  background: #f4f4f4;
+}
+/* Cart link container */
+.nav-link {
+  display: flex;
+  align-items: center;
+  position: relative; /* Required for absolute badge positioning */
+  gap: 6px;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.2s ease;
+}
+
+.nav-link:hover {
+  transform: translateY(-2px);
+}
+
+/* Modern circular cart badge */
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background: #176d57; /* Matches your brand color */
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 2px solid #ffffff; /* Creates a clean "cutout" effect */
+}
+
+/* Optional: Subtle animation for the icon */
+.nav-link svg {
+  font-size: 1.3rem;
+}
+/* Ensure the list item doesn't interfere with positioning */
+.cat li {
+  display: flex;
+  align-items: center;
+}
+
+/* Modern styling for the link */
+.nav-link {
+  position: relative; /* Essential: creates the anchor for the badge */
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  padding: 8px;
+  transition: transform 0.2s ease;
+}
+
+.nav-link:hover {
+  transform: translateY(-2px);
+  color: #ff4d4d;
+}
+
+/* Modern Badge Styling */
+.favorite-count {
+  position: absolute;
+  top: -2px;      /* Adjust to sit on top of the heart */
+  right: -8px;    /* Adjust to sit on the right of the heart */
+  background: #ff4d4d;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 2px solid #ffffff; /* Cutout effect against the nav background */
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav { padding: 1rem; }
+  .cat { gap: 10px; }
+}

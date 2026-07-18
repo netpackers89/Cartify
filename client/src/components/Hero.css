@@ -1,0 +1,172 @@
+.hero-parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 20px;
+  height: 85vh;
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.hero-parent > div {
+  border-radius: 24px; /* Modern, slightly tighter than 30px */
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+.div1 {
+  grid-column: span 3;
+  grid-row: span 4;
+  background: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+  color: white;
+}
+.div1::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.1) 50%, transparent 100%);
+  z-index: 1;
+}
+.div1 .content {
+  position: relative;
+  z-index: 2;
+  max-width: 80%;
+}
+.div1 .badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.div1 h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0 0 25px 0;
+  letter-spacing: -1px;
+}
+.hero-btn {
+  background: white;
+  color: black;
+  border: none;
+  padding: 16px 32px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.div2 {
+  grid-column: span 2;
+  grid-row: span 4;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #1a1a1a;
+}
+.div2-content {
+  z-index: 2;
+}
+.div2 .floating-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  animation: float 3s ease-in-out infinite;
+}
+.div2 h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+.div2 p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+.div3 {
+  grid-column: span 5;
+  background:url('https://i.pinimg.com/1200x/bf/de/c2/bfdec296f57d011d563f8661c2fe378d.jpg') center/cover no-repeat ;
+  ;
+  width: 1400px;
+  height: 100px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.marquee-content {
+  display: flex;
+  gap: 60px;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  animation: marquee 15s linear infinite;
+}
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+@media (max-width: 768px) {
+  .hero-parent {
+    display: flex;
+    flex-direction: column; /* Stack instead of grid */
+    height: auto;
+    gap: 15px;
+    padding: 15px;
+  }
+  .div1, .div2, .div3 {
+    width: 100%;
+    min-height: 400px; /* Taller for better impact */
+    border-radius: 20px;
+  }
+  .div2 {
+    min-height: 250px;
+    background: white; /* Clean white card */
+    border: 1px solid #eee;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  }
+  .div3 {
+    height: 60px;
+    background: #000;
+    border-radius: 12px;
+  }
+  .div1 h1 { font-size: 2rem; }
+  .hero-btn { padding: 12px 24px; font-size: 0.9rem; }
+}
+.hero-parent > div {
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+@media (min-width: 769px) {
+  .hero-parent > div:hover {
+    transform: scale(1.02);
+  }
+}
+.div3 {
+    width: 100% !important; /* Fix your previous width issue */
+    background-size: cover;
+    position: relative;
+}
+.div3::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4); /* Darkens the image so text pops */
+}

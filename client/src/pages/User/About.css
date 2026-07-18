@@ -1,0 +1,15 @@
+.about-page { max-width: 900px; margin: 60px auto; padding: 0 20px; font-family: 'Inter', sans-serif; color: #111; }
+.about-hero { text-align: center; padding: 40px 0; }
+.about-hero h1 { font-size: clamp(3rem, 5vw, 4rem); margin: 0; letter-spacing: -0.04em; }
+.about-hero p { max-width: 720px; margin: 16px auto 0; color: #555; font-size: 1.05rem; line-height: 1.8; }
+.story-card, .values-grid { background: white; border-radius: 28px; box-shadow: 0 20px 40px rgba(0,0,0,.05); padding: 32px; margin: 24px 0; }
+.story-card h2 { font-size: 1.8rem; margin-bottom: 16px; }
+.story-card p { color: #555; line-height: 1.8; }
+.values-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.values-grid article { border: 1px solid #f0f0f0; border-radius: 20px; padding: 24px; transition: transform .25s ease, box-shadow .25s ease; }
+.values-grid article:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,.06); }
+.values-grid h3 { margin-top: 0; font-size: 1.2rem; }
+.values-grid p { color: #555; line-height: 1.75; }
+@media (max-width: 640px) { .about-page { padding: 0 16px; }
+  .story-card, .values-grid { padding: 24px; }
+}
